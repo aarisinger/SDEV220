@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<body>
+    <div class="jumbrotron text-center">
+        <h1 class="display-4">Garage</h1>
+    </div>
+    <div class="container">
+        {% for i in car %}
+        <div class="card" style="background-color: rgba(8, 105, 169, 0.356)">
+            <div class="card-header bg-dark text-white">
+                <h5 class="card-title">{{i.color}} {{i.model}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Make: {{i.make}}</p>
+            <p class="card-text">Model: {{i.model}}</p>
+            <p class="card-text">Year: {{i.year}}</p>
+            <br>
+
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+
+</html>
